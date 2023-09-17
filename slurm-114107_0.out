@@ -1,0 +1,78 @@
+Sun Sep 17 20:00:40 +07 2023
+Starting ArtefactCorr: n05p001 node,  OpenMP threads...
+TF_CONFIG: {"cluster": {"worker": ["n05p001:12345", "n05p002:12345", "n05p003:12345"]},"task": {"type": "worker", "index": 0}}
+2023-09-17 20:00:42.006138: I tensorflow/core/util/port.cc:110] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2023-09-17 20:00:42.038742: I tensorflow/tsl/cuda/cudart_stub.cc:28] Could not find cuda drivers on your machine, GPU will not be used.
+2023-09-17 20:00:42.416930: I tensorflow/tsl/cuda/cudart_stub.cc:28] Could not find cuda drivers on your machine, GPU will not be used.
+2023-09-17 20:00:42.418881: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-09-17 20:00:45.571262: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+2023-09-17 20:01:15.959337: I tensorflow/core/distributed_runtime/rpc/grpc_server_lib.cc:449] Started server with target: grpc://n05p001:12345
+2023-09-17 20:01:16.004443: I tensorflow/tsl/distributed_runtime/coordination/coordination_service.cc:535] /job:worker/replica:0/task:0 has connected to coordination service. Incarnation: 16597960986376287716
+2023-09-17 20:01:16.006230: I tensorflow/tsl/distributed_runtime/coordination/coordination_service_agent.cc:298] Coordination agent has successfully connected.
+2023-09-17 20:01:16.401055: I tensorflow/tsl/distributed_runtime/coordination/coordination_service.cc:535] /job:worker/replica:0/task:2 has connected to coordination service. Incarnation: 8672556920091257966
+2023-09-17 20:01:17.172192: I tensorflow/tsl/distributed_runtime/coordination/coordination_service.cc:535] /job:worker/replica:0/task:1 has connected to coordination service. Incarnation: 16761917731768309010
+
+2023-09-17 20:00:40: Initializing tensorflow.keras started.
+
+2023-09-17 20:00:49: Initializing tensorflow.keras finished.
+
+2023-09-17 20:00:49: Initializing sklearn.model_selection started.
+
+2023-09-17 20:00:50: Initializing sklearn.model_selection started.
+
+2023-09-17 20:00:50: Initializing tensorflow started.
+
+2023-09-17 20:00:50: Initializing tensorflow finished.
+
+2023-09-17 20:00:50: Program started.
+
+2023-09-17 20:00:50: Making dataset started.
+
+2023-09-17 20:01:15: Building model started.
+Model: "sequential"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ conv2d (Conv2D)             (None, 57, 60, 64)        5248      
+                                                                 
+ conv2d_1 (Conv2D)           (None, 57, 60, 32)        100384    
+                                                                 
+ max_pooling2d (MaxPooling2  (None, 57, 60, 32)        0         
+ D)                                                              
+                                                                 
+ conv2d_2 (Conv2D)           (None, 57, 60, 16)        12816     
+                                                                 
+ max_pooling2d_1 (MaxPoolin  (None, 57, 60, 16)        0         
+ g2D)                                                            
+                                                                 
+ conv2d_3 (Conv2D)           (None, 57, 60, 8)         1160      
+                                                                 
+ dropout (Dropout)           (None, 57, 60, 8)         0         
+                                                                 
+ conv2d_transpose (Conv2DTr  (None, 57, 60, 16)        1168      
+ anspose)                                                        
+                                                                 
+ conv2d_transpose_1 (Conv2D  (None, 57, 60, 32)        25120     
+ Transpose)                                                      
+                                                                 
+ conv2d_transpose_2 (Conv2D  (None, 57, 60, 64)        165952    
+ Transpose)                                                      
+                                                                 
+ conv2d_transpose_3 (Conv2D  (None, 57, 60, 1)         577       
+ Transpose)                                                      
+                                                                 
+=================================================================
+Total params: 312425 (1.19 MB)
+Trainable params: 312425 (1.19 MB)
+Non-trainable params: 0 (0.00 Byte)
+_________________________________________________________________
+
+2023-09-17 20:01:17: Training started.
+Epoch 1/3
+103/103 - 10s - loss: 13432525748841742336.0000 - accuracy: 0.8959 - val_loss: 12908766787880878080.0000 - val_accuracy: 0.9880 - lr: 0.0010 - 10s/epoch - 97ms/step
+Epoch 2/3
+103/103 - 8s - loss: 12972056876198920192.0000 - accuracy: 0.9928 - val_loss: 12955371787247419392.0000 - val_accuracy: 0.9894 - lr: 0.0010 - 8s/epoch - 75ms/step
+Epoch 3/3
+103/103 - 8s - loss: 12844580597586198528.0000 - accuracy: 0.9924 - val_loss: 12626173607844773888.0000 - val_accuracy: 0.9924 - lr: 0.0010 - 8s/epoch - 76ms/step
+Sun Sep 17 20:01:43 +07 2023
